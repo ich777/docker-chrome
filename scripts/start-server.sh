@@ -1,10 +1,10 @@
 #!/bin/bash
 
 echo "---Resolution check---"
-if [ -z "${CUSTOM_RES_W} ]; then
+if [ -z "${CUSTOM_RES_W}" ]; then
 	CUSTOM_RES_W=1024
 fi
-if [ -z "${CUSTOM_RES_H} ]; then
+if [ -z "${CUSTOM_RES_H}" ]; then
 	CUSTOM_RES_H=768
 fi
 
@@ -42,4 +42,4 @@ sleep infinity
 
 echo "---Starting Chrome---"
 cd ${DATA_DIR}
-${DATA_DIR}/chromium
+/usr/bin/chromium --user-data-dir=${DATA_DIR} --disable-accelerated-video --disable-gpu --window-size=${CUSTOM_RES_W},"${CUSTOM_RES_H}" --window-position=0,0 --no-sandbox --test-type
