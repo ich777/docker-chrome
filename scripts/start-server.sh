@@ -23,6 +23,7 @@ find $DATA_DIR -name "x11vncLog.*" -exec rm -f {} \;
 echo "---Checking for old display lock files---"
 find /tmp -name ".X99*" -exec rm -f {} \; > /dev/null 2>&1
 screen -wipe 2&>/dev/null
+rm -rf ${DATA_DIR}/Singleton* 2&>/dev/null
 
 chmod -R ${DATA_PERM} ${DATA_DIR}
 
