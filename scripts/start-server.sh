@@ -1,4 +1,5 @@
 #!/bin/bash
+export DISPLAY=:99
 
 echo "---Resolution check---"
 if [ -z "${CUSTOM_RES_W}" ]; then
