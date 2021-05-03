@@ -24,7 +24,7 @@ find $DATA_DIR -name "x11vncLog.*" -exec rm -f {} \;
 echo "---Checking for old display lock files---"
 rm -rf /tmp/.X99*
 rm -rf /tmp/.X11*
-rm -rf ${DATA_DIR}/.vnc/*.log ${DATA_DIR}/.vnc/*.pid
+rm -rf ${DATA_DIR}/.vnc/*.log ${DATA_DIR}/.vnc/*.pid ${DATA_DIR}/Singleton*
 chmod -R ${DATA_PERM} ${DATA_DIR}
 if [ -f ${DATA_DIR}/.vnc/passwd ]; then
 	chmod 600 ${DATA_DIR}/.vnc/passwd
