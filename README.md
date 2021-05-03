@@ -27,7 +27,7 @@ docker run --name Chrome -d \
 	--volume /mnt/cache/appdata/chrome:/chrome \
 	ich777/chrome
 ```
-### Webgui address: http://[SERVERIP]:[PORT]/vnc_auto.html
+### Webgui address: http://[SERVERIP]:[PORT]/vnc.html?autoconnect=true
 
 This Docker was mainly edited for better use with Unraid, if you don't use Unraid you should definitely try it!
 
