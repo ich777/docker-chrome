@@ -21,11 +21,11 @@ fi
 echo "---Checking for old logfiles---"
 find $DATA_DIR -name "XvfbLog.*" -exec rm -f {} \;
 find $DATA_DIR -name "x11vncLog.*" -exec rm -f {} \;
-chmod -R ${DATA_PERM} ${DATA_DIR}
 echo "---Checking for old display lock files---"
 rm -rf /tmp/.X99*
 rm -rf /tmp/.X11*
 rm -rf ${DATA_DIR}/.vnc/*.log ${DATA_DIR}/.vnc/*.pid
+chmod -R ${DATA_PERM} ${DATA_DIR}
 if [ -f ${DATA_DIR}/.vnc/passwd ]; then
 	chmod 600 ${DATA_DIR}/.vnc/passwd
 fi
