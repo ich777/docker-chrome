@@ -40,6 +40,16 @@ echo "---Starting noVNC server---"
 websockify -D --web=/usr/share/novnc/ --cert=/etc/ssl/novnc.pem 8080 localhost:5900
 sleep 2
 
+echo "+-------------------------------------------------------------"
+echo "|"
+echo "| This container for ARM is deprecated and is no"
+echo "| longer actively maintained or further developed!"
+echo "|"
+echo "|  Container will start in 60 seconds!"
+echo "|"
+echo "+-------------------------------------------------------------"
+sleep 60
+
 echo "---Starting Chrome---"
 cd ${DATA_DIR}
 /usr/bin/chromium --user-data-dir=${DATA_DIR} --disable-accelerated-video --disable-gpu --window-size=${CUSTOM_RES_W},${CUSTOM_RES_H} --window-position=0,0 --no-sandbox --test-type --dbus-stub ${EXTRA_PARAMETERS} 2>/dev/null
