@@ -4,7 +4,7 @@ LABEL maintainer="admin@minenet.at"
 
 RUN export TZ=Europe/Rome && \
 	apt-get update && \
-	apt-get -y install --no-install-recommends chromium && \
+	apt-get -y install --no-install-recommends chromium libgtk-3-0 && \
 	ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
 	echo $TZ > /etc/timezone && \
 	rm -rf /var/lib/apt/lists/* && \
